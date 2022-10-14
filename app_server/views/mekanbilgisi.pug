@@ -1,0 +1,70 @@
+extends layout
+block content
+  .row.page-header
+    .col-lg-12 
+      hi Sarımsak Kafe
+  
+  .row
+    .col-xs-12.col-md-12
+      .row 
+        .col-xs-12.col-sm-6 
+          p.rating 
+              span.glyphicon.glyphicon-star
+              span.glyphicon.glyphicon-star
+              span.glyphicon.glyphicon-star
+              span.glyphicon.glyphicon-star
+              span.glyphicon.glyphicon-star
+          p Bahçelievler Mahallesi 108. Cadde
+          .panel.panel-primary
+            .panel-heading
+              h2.panel-title Çalışma Saatleri
+            .panel-body
+              p 
+                | Pazartesi-Cuma: 10.00-02.00
+              p
+                | Cumartesi-Pazar: 12.00-01.00
+            
+          .panel.panel-primary
+            .panel-heading
+              h2.panel-title Neler Var?
+            .panel-body 
+              span.label.label-warning Kahveler 
+              | &nbsp;
+              span.label.label-warning Kurabiye 
+              | &nbsp;
+              span.label.label-warning Masa Oyunları
+              | &nbsp;
+    
+
+        .col-xs-12.col-sm-6
+            .panel.panel-primary 
+              .panel-heading 
+                h2.panel-title Konum Bilgisi 
+              .panel-body 
+                -var enlem = 37.78
+                -var boylam = 30.54
+                img.img-responsive.img-rounded(src='https://maps.googleapis.com/maps/api/staticmap?center='+enlem+','+boylam+
+                '&zoom=12&size=600x400&markers='+enlem+','+boylam+'&key=AIzaSyCmmKygTpBzHGOZEciJpAdxC9v_tWHagnE')
+  
+                
+                
+  .row 
+    .col-xs-12 
+      .panel.panel-primary
+        .panel-heading
+          a.btn.btn-default.pull-right(href='/mekan/yorum/yeni') Yorum Ekle
+          h2.panel-title Müşteri Yorumları
+        .panel-body.review-container
+          .row 
+            .review
+              .well.well-sm-review-header
+                span.rating
+                span.glyphicon.glyphicon-star
+                span.glyphicon.glyphicon-star
+                span.glyphicon.glyphicon-star
+                span.glyphicon.glyphicon-star
+                span.glyphicon.glyphicon-star
+                span.review-author Abdullah Mert Ulusoy
+                small.reviewTimestamp &nbsp; 13 Ekim 2022
+              .col-xs-12 
+                p Mekan çok eğlenceli.
