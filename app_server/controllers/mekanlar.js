@@ -2,15 +2,15 @@ var express = require('express');
 var router = express.Router();
 
 const anaSayfa = function (req, res, next) {
-  res.render('anaSayfa', { title: 'anaSayfa' });
+  res.render('anasayfa', { title: 'anaSayfa' });
 }
 
 const mekanBilgisi = function (req, res, next) {
-  res.render('mekanBilgisi', { title: 'mekanBilgisi' });
+  res.render('mekanbilgisi', { title: 'mekanBilgisi' });
 }
 
 const yorumEkle = function (req, res, next) {
-  res.render('yorumEkle', { title: 'yorumEkle' });
+  res.render('yorumekle', { title: 'yorumEkle' });
 }
 
 module.exports = {
