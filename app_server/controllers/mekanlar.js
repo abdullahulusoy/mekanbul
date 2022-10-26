@@ -63,9 +63,16 @@ const mekanBilgisi = function (req, res) {
                     {
                         "yorumYapan":"Abdullah Mert Ulusoy",
                         "puan":"4",
-                        "tarih":"20 Ekim 2022",
+                        "tarih":"13 Ekim 2022",
                         "yorumMetni":"Kahveler güzel."
+                    },
+                    {
+                        "yorumYapan":"Murat Ulusoy",
+                        "puan":"2",
+                        "tarih":"20 Ekim 2022",
+                        "yorumMetni":"Kahveler berbat."
                     }
+
                 ]
 
             }
