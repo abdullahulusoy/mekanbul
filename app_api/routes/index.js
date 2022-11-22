@@ -1,30 +1,27 @@
-var express = require("express");
-var router = express.Router();
-var ctrlMekanlar = require("../controllers/mekanlar");
-var ctrlYorumlar = require("../controllers/yorumlar");
-
-//MEKANLAR
+var express=require("express");
+const { route } = require("../../app");
+var router=express.Router();
+var ctrlMekanlar=require("../controllers/mekanlar");
+var ctrlYorumlar=require("../controllers/yorumlar");
 router
-   .route("/mekanlar/:mekanid") //bağlantı adresindeki kısmı dinamikleştirir :, bağlantı adresinde tüm idleri alabilmemizi sağlar
-   .get(ctrlMekanlar.mekanGetir)
-   .put(ctrlMekanlar.mekanGuncelle)
-   .delete(ctrlMekanlar.mekanSil); // aynı id üzerinden erişim sağlandığı için zincirleme yapı kullanılır
+.route("/mekanlar")
+.get(ctrlMekanlar.mekanlariListele)
+.post(ctrlMekanlar.mekanEkle);
 
 router
-   .route("/mekanlar")
-   .get(ctrlMekanlar.mekanlariListele)
-   .post(ctrlMekanlar.mekanEkle);
-
-//YORUMLAR
+.route("/mekanlar/:mekanid")
+.get(ctrlMekanlar.mekanGetir)
+.put(ctrlMekanlar.mekanGuncelle)
+.delete(ctrlMekanlar.mekanSil);
 
 router
-   .route("/mekanlar/:mekanid/yorumlar")
-   .post(ctrlYorumlar.yorumEkle);
-   
-router
-   .route("/mekanlar/:mekanid/yorumlar/:yorumid")
-   .get(ctrlYorumlar.yorumGetir)
-   .put(ctrlYorumlar.yorumGuncelle)
-   .post(ctrlYorumlar.yorumSil);
+.route("/mekanlar/:mekanid/yorumlar")
+.post(ctrlYorumlar.yorumEkle);
 
-module.exports = router;
+router
+.route("/mekanlar/:mekanid/yorumlar/:yorumid")
+.get(ctrlYorumlar.yorumGetir)
+.put(ctrlYorumlar.yorumGuncelle)
+.delete(ctrlYorumlar.yorumSil);
+
+module.exports=router;
