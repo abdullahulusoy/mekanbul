@@ -1,5 +1,8 @@
 [Yakınlardaki Mekanları Listele - Replit Adresi](https://mekanbul.abdullahulusoy.repl.co/?enlem=37&boylam=35)
-![Yakınlardaki Mekanları Listele - Replit Adresi](./resimler/replit.png)
+![Yakınlardaki Mekanları Listele - Replit Adresi](./resimler/replitt.png)
+
+[Yorum Satırına Dikkat!!!](https://mekanbul.abdullahulusoy.repl.co/mekan/638b70cdb2b3bdf64dfb362f)
+![Yorum Satırına Dikkat!!!](./resimler/yorum.png)
 
 
 
