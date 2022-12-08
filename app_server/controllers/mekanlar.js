@@ -69,7 +69,7 @@ var mesafeyiFormatla = function (mesafe) {
         mekanDetay: mekanDetaylari
       });
   }
-  var hataGoster = function (res, hata) {
+  var hataGoster = function (res,hata) {
     var mesaj;
     if (hata.response.status == 404) {
       mesaj = "404, Sayfa Bulunamadı!";
@@ -92,7 +92,7 @@ var mesafeyiFormatla = function (mesafe) {
         detaySayfasiOlustur(res, response.data);
       })
       .catch(function (hata) {
-        hataGoster(res, hata);
+        hataGoster(res,hata);
       });
   };
   const yorumEkle = function (req, res) {
